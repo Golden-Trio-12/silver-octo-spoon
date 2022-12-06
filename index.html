@@ -1,0 +1,112 @@
+
+
+<html>
+    <head>
+      <title>Real Time Image Identification App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+    <center>
+          <p>CASE STUDY BETWEEN GOOGLE LENS AND MOBILENET</p>
+          <span class="google_lens">GOOGLE LENS <img src="https://www.bing.com/th?id=Ad4c93f2425bde88c5133a1081ee67f19&w=110&h=110&c=7&rs=1&qlt=80&o=6&dpr=1.5&pid=SANGAM"></span>
+          <p>VS</p>
+          <p class="btn btn-primary" id="mobilenet">Mobilenet</p>
+          <hr>
+          <br>
+          <ol>
+            <div class="test_image_and_result1 col-xs-12">
+              <li class="col-sm-4 col-xs-12">
+                <b class="white1">Test Image - </b>
+                <img class="img" src="https://cdn.shopify.com/s/files/1/0265/2746/5577/products/product-image-1409460142_400x.jpg?v=1607760161">
+              </li>
+              <h5 class="first col-sm-4 col-xs-12">
+                Output on <b>GOOGLE LENS</b> - 
+                <span>Rts Mirror Alarm Clock</span>
+              </h5>
+              <h5 class="second col-sm-4 col-xs-12">
+                Output on <b>Mobilenet Model </b> - 
+                <span>Printer...</span>
+              </h5>
+              <div class="mini_result" class="col-xs-12">
+                <h4>Result - </h4>
+                <hr>
+                <h4>GOOGLE LENS Is More Accurate</h4>
+              </div>
+            </div>
+
+
+            <div class="test_image_and_result1 col-xs-12">
+              <li class="col-sm-4 col-xs-12">
+                <b class="white1">Test Image - </b>
+                <img class="img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRpCQP02hXeEX0zfelMRJabb7t4gkPyqVWtm2GEi6p1ZSY8gZgv">
+              </li>
+              <h5 class="first col-sm-4 col-xs-12">
+                Output on <b>GOOGLE LENS</b> - 
+                <span>Donald Duck Pinnacle Golf Ball</span>
+              </h5>
+              <h5 class="second col-sm-4 col-xs-12">
+                Output on <b>Mobilenet Model </b> - 
+                <span>Golf Ball</span>
+              </h5>
+              <div class="mini_result" class="col-xs-12">
+                <h4>Result - </h4>
+                <hr>
+                <h4>GOOGLE LENS Is More Accurate (Mobilenet got the object - not as specific though) </h4>
+              </div>
+            </div>
+
+            <div class="test_image_and_result1 col-xs-12">
+              <li class="col-sm-4 col-xs-12">
+                <b class="white1">Test Image - </b>
+                <img class="img" src="https://static2.jetpens.com/images/a/000/073/73122.jpg?ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&w=600&s=03b0ec73c366c33a79bfbd92b737c9db">
+              </li>
+              <h5 class="first col-sm-4 col-xs-12">
+                Output on <b>GOOGLE LENS</b> - 
+                <span>Zebra Sarasa Clip Gel Retractable Pen </span>
+              </h5>
+              <h5 class="second col-sm-4 col-xs-12">
+                Output on <b>Mobilenet Model </b> - 
+                <span>Ballpoint Pen</span>
+              </h5>
+              <div class="mini_result" class="col-xs-12">
+                <h4>Result - </h4>
+                <hr>
+                <h4>GOOGLE LENS Is More Accurate (Mobilenet got the object - not as specific though) </h4>
+              </div>
+            </div>
+
+            <div class="test_image_and_result1 col-xs-12">
+              <li class="col-sm-4 col-xs-12">
+                <b class="white1">Test Image - </b>
+                <img class="img" src="https://cdn.shopify.com/s/files/1/0431/1842/8321/products/4549131583441_11_grande.jpg?v=1619331048">
+              </li>
+              <h5 class="first col-sm-4 col-xs-12">
+                Output on <b>GOOGLE LENS</b> - 
+                <span>Electric Sharpener 2.9 Blue </span>
+              </h5>
+              <h5 class="second col-sm-4 col-xs-12">
+                Output on <b>Soap Dispenser </b> - 
+                <span></span>
+              </h5>
+              <div class="mini_result" class="col-xs-12">
+                <h4>Result - </h4>
+                <hr>
+                <h4>GOOGLE LENS Is More Accurate</h4>
+              </div>
+            </div>
+
+            </ol>
+            </center>
+            </body>
+            </html>
